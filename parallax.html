@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="para.css">
+</head>
+<body>
+    <header>
+        <a href="#" id="logo">logo</a>
+        <ul>
+            <li><a href="" class="active">home</a></li>
+            <li><a href="">about</a></li>
+            <li><a href="">work</a></li>
+            <li><a href="">contact</a></li>
+        </ul>
+    </header>
+    <section>
+        <img src="star.png" id="star" alt="">
+        <img src="m3.png" id="moon" alt="">
+        <img src="mountains_behind.png" id="bmtn" alt="">
+        <h2 id="text">Moon light</h2>
+        <a href="#sec " id="btn">Explore</a>
+        <img src="mountains_front.png" id="fmtn" alt="">
+    </section>
+    <div class="sec" id="sec">
+        <h2 class="pse">parallax scrolloing effect</h2>
+        <p class="para" >Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius distinctio deserunt facere rerum alias recusandae, molestiae eveniet laborum doloribus animi provident quos delectus rem, repellendus praesentium sapiente! Porro molestiae suscipit magnam a laboriosam quia repellat, eos dolores possimus amet doloribus voluptatum voluptatibus voluptas nobis ducimus modi asperiores similique accusamus enim?<br><br> ipsum dolor sit amet consectetur, adipisicing elit. Culpa saepe illo nisi dolorum quasi molestiae neque atque autem nulla laboriosam, fugit dicta qui doloremque, soluta quo ad voluptatum laudantium beatae id repudiandae necessitatibus fuga molestias cumque. Quod repellendus quaerat iusto ea, autem aspernatur tempore totam voluptates similique itaque, sequi vel! <br><br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic veniam modi repellat voluptatibus aliquid, laudantium reprehenderit unde eos repellendus rerum deserunt earum provident aspernatur magni ratione odit culpa ut cum, eum adipisci? Alias corporis, officia architecto laboriosam, aperiam ipsa tenetur, autem sed eos commodi quod possimus eum esse facilis corrupti. <br><br>
+    </p>
+</div> 
+<script>
+    let star=document.getElementById("star")
+    let moon=document.getElementById("moon")
+    let bmtn=document.getElementById("bmtn")
+    let text=document.getElementById("text")
+    let btn=document.getElementById("btn")
+    let fmtn=document.getElementById("fmtn")
+    let header=document.querySelector("header")
+
+window.addEventListener("scroll",function(){
+    let value = window.scrollY;
+    star.style.left=value*0.25+"px";
+    moon.style.top=value*1.05+"px";
+    bmtn.style.top=value*0.5+"px";
+    fmtn.style.top=value*0+"px";
+    text.style.marginRight=value*4+"px";
+    text.style.marginTop=value*1.2+"px";
+    btn.style.marginTop=value*1.2+"px";
+    header.style.top=value*0.5+"px";
+})
+</script>   
+</body>
+</html>
